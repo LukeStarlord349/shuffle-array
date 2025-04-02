@@ -38,6 +38,15 @@ console.log(startArray);       // e.g., [1, 2, 3, 4, 5]
 console.log(newShuffledArray); // e.g., [3, 1, 5, 2, 4]
 ```
 
+```js
+import shuffleArray, { cryptoShuffleArray } from '@supidupiluki/shuffle-array';
+
+const data = ['alpha', 'beta', 'gamma', 'delta'];
+const shuffled = cryptoShuffleArray(data);
+
+console.log(shuffled); // e.g., ['gamma', 'alpha', 'delta', 'beta']
+```
+
 ### Examples
 
 Shuffle a list of user IDs:
@@ -60,6 +69,29 @@ const deck = ['Ace of Spades', 'Two of Hearts']; // some card deck
 const shuffledDeck = shuffleArray(deck);
 
 console.log(shuffledDeck); // e.g., ['Two of Hearts', 'Ace of Spades', ...]
+```
+
+Securely shuffle a list of tokens:
+
+```js
+import shuffleArray, { cryptoShuffleArray } from '@supidupiluki/shuffle-array';
+
+const tokens = ['tokenA', 'tokenB', 'tokenC', 'tokenD'];
+const shuffledTokens = cryptoShuffleArray(tokens);
+
+console.log(shuffledTokens); // e.g., ['tokenC', 'tokenA', 'tokenD', 'tokenB']
+```
+
+
+Use in a cryptographic lottery draw:
+
+```js
+import shuffleArray, { cryptoShuffleArray } from '@supidupiluki/shuffle-array';
+
+const participants = ['Alice', 'Bob', 'Charlie', 'Diana'];
+const randomizedWinners = cryptoShuffleArray(participants);
+
+console.log(randomizedWinners); // e.g., ['Diana', 'Alice', 'Charlie', 'Bob']
 ```
 
 ## Contribution
